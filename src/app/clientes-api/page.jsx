@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import Clientes from "@/components/api-clientes";
-import clienteNuevo from "@/components/api-cliente-nuevo";
+import clientes from "@/components/api-clientes";
+import ClienteNuevo from "@/components/api-cliente-nuevo";
 import { Suspense } from "react";
 
 
 
-async function ClientePage({ searchParams }) {
+async function ClientesPage({ searchParams }) {
     const { query } = await searchParams;
 
     // Introducimos un retardo artificial
@@ -21,14 +21,14 @@ async function ClientePage({ searchParams }) {
             </h1>
 
             <Suspense fallback={<Fallback>Nuevo cliente ... </Fallback>}>
-                <clienteNuevo />
+                <ClienteNuevo />
             </Suspense>
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-                <Clientes query={query || ''} />
+                <clientes query={query || ''} />
             </Suspense>
         </section>
     );
 }
 
-export default ClientePage;
+export default ClientesPage;
