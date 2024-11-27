@@ -5,13 +5,13 @@ async function nuevoCliente(formData) {
     'use server'
     const [nombre, domicilio, fecha] = formData.values()
 
-    const response = await fetch('http://localhost:4000/productos', {
+    const response = await fetch('http://localhost:4000/clientes', {
         method: 'POST',
-        body: JSON.stringify({ nombre, domicilio, fecha,  createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, domicilio, fecha_nacimiento: fecha,  createdAt: new Date().toISOString() })
     })
     const data = await response.json()
 
-    revalidatePath('/clients')
+    revalidatePath('/clientes-api')
 }
 
 
@@ -20,14 +20,14 @@ function ClienteNew() {
     return (
         <form className='my-10 grid grid-cols-[150px_auto] gap-4'>
 
-            <label htmlFor='nombre'>Name</label>
+            <label htmlFor='nombre'>Nombre</label>
             <input required id='nombre' name='nombre' className='p-1 border border-slate-200 focus:outline-blue-300 text-lg' />
 
             <label htmlFor='domicilio'>Domicilio:</label>
             <input required id='domicilio' name='domicilio' className='p-1 border border-slate-200 focus:outline-blue-300 text-lg' />
 
             <label htmlFor='fecha'>fecha</label>
-            <input required id='date' name='date' type='number' step='0.01' className='p-1 border border-slate-200 focus:outline-blue-300 text-lg' />
+            <input required id='fecha' name='fecha' type='date'  className='p-1 border border-slate-200 focus:outline-blue-300 text-lg' />
 
             <div className='col-span-2 grid gap-2'>
                 <button formAction={nuevoCliente} className='bg-green-600 text-white px-4 py-2 rounded-xl'>

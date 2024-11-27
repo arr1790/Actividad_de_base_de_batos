@@ -1,9 +1,9 @@
-import clientes from "@/components/db-clientes";
+
 import ClienteNuevo from "@/components/db-cliente-nuevo";
 import { Suspense } from "react";
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import Clientes from "@/components/api-clientes";
+import Clientes from "@/components/db-clientes";
 
 
 

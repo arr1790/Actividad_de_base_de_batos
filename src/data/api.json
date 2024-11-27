@@ -34,6 +34,54 @@
       "descripcion": "44",
       "precio": 44,
       "createdAt": "2024-11-25T12:38:39.289Z"
+    },
+    {
+      "id": "aafb",
+      "nombre": "a",
+      "domicilio": "calle,221",
+      "fecha": "2024-11-14",
+      "createdAt": "2024-11-27T17:58:49.417Z"
+    },
+    {
+      "id": "5186",
+      "nombre": "angel",
+      "domicilio": "calle,221",
+      "fecha": "2024-11-06",
+      "createdAt": "2024-11-27T18:10:03.404Z"
+    },
+    {
+      "id": "9b8c",
+      "nombre": "Ana Ruano Ruiz",
+      "domicilio": "calle ,144",
+      "fecha_nacimiento": "2024-11-09",
+      "createdAt": "2024-11-27T18:13:43.511Z"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "Ana",
+      "domicilio": "calle,144",
+      "fecha_nacimiento": "2024-11-25"
+    },
+    {
+      "id": "2",
+      "nombre": "Jose cabeza",
+      "domicilio": "calle,1",
+      "fecha_nacimiento": "2024-11-21"
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos",
+      "domicilio": "calle,13",
+      "fecha_nacimiento": "2023-11-25"
+    },
+    {
+      "id": "13ab",
+      "nombre": "anass",
+      "domicilio": "calle ,122",
+      "fecha_nacimiento": "2024-11-08",
+      "createdAt": "2024-11-27T18:15:29.581Z"
     }
   ]
 }

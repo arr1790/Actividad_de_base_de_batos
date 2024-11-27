@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import clientes from "@/components/api-clientes";
+import Clientes from "@/components/api-clientes";
 import ClienteNuevo from "@/components/api-cliente-nuevo";
 import { Suspense } from "react";
 
@@ -25,7 +25,7 @@ async function ClientesPage({ searchParams }) {
             </Suspense>
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-                <clientes query={query || ''} />
+                <Clientes query={query || ''} />
             </Suspense>
         </section>
     );

@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache'
 async function obtenerClientes(query) {
     const response = await fetch('http://localhost:4000/clientes')
     const clientes = await response.json()
-
+    console.log(response)
     // Introducimos un retardo artificial
     // await new Promise(resolve => setTimeout(resolve, 2000))
 
